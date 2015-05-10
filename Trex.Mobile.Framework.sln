@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trex.Framework.Core", "Trex.Framework.Core\Trex.Framework.Core.csproj", "{42076C76-8E1C-460E-9D72-898ED5FB33CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sqlite", "Sqlite", "{E4273172-3DE5-46C4-81A7-C4B71582D09A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trex.Framework.Sqlite", "Trex.Framework.Sqlite\Trex.Framework.Sqlite.csproj", "{0D5BF104-D322-4407-8391-CA8C6B7BE958}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms.Controls", "Forms.Controls", "{6B8CD9FB-0EA7-4889-B5BA-1C1E8D717457}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trex.Framework.Controls", "Trex.Framework.Controls\Trex.Framework.Controls.csproj", "{EFDAC15C-EC65-4828-AD69-435D98B5A116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42076C76-8E1C-460E-9D72-898ED5FB33CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42076C76-8E1C-460E-9D72-898ED5FB33CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42076C76-8E1C-460E-9D72-898ED5FB33CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42076C76-8E1C-460E-9D72-898ED5FB33CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D5BF104-D322-4407-8391-CA8C6B7BE958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5BF104-D322-4407-8391-CA8C6B7BE958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5BF104-D322-4407-8391-CA8C6B7BE958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5BF104-D322-4407-8391-CA8C6B7BE958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFDAC15C-EC65-4828-AD69-435D98B5A116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFDAC15C-EC65-4828-AD69-435D98B5A116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFDAC15C-EC65-4828-AD69-435D98B5A116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFDAC15C-EC65-4828-AD69-435D98B5A116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D5BF104-D322-4407-8391-CA8C6B7BE958} = {E4273172-3DE5-46C4-81A7-C4B71582D09A}
+		{EFDAC15C-EC65-4828-AD69-435D98B5A116} = {6B8CD9FB-0EA7-4889-B5BA-1C1E8D717457}
+	EndGlobalSection
+EndGlobal
