@@ -1,15 +1,15 @@
 ﻿namespace Trex.Framework.Sqlite
 {
-    using SQLite.Net;
-    using SQLite.Net.Async;
-    using System;
     using System.Threading.Tasks;
+    using SQLite.Net.Async;
     using Trex.Framework.Core;
+
     public abstract class SqliteConnection
     {
         public static readonly AsyncLock Mutex = new AsyncLock();
         public readonly SQLiteAsyncConnection _Asyncconnection;
-        public SqliteConnection(ISqliteConnection sqlliteConection)
+
+        protected SqliteConnection(ISqliteConnection sqlliteConection)
         {
             _Asyncconnection = sqlliteConection.GetConnectionAsync();
             this.CreateDatabaseAsync();
