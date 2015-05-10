@@ -7,9 +7,8 @@
     using Trex.Framework.Core;
     public abstract class SqliteConnection
     {
-        protected static readonly AsyncLock Mutex = new AsyncLock();
-        protected readonly SQLiteAsyncConnection _Asyncconnection;
-
+        public static readonly AsyncLock Mutex = new AsyncLock();
+        public readonly SQLiteAsyncConnection _Asyncconnection;
         public SqliteConnection(ISqliteConnection sqlliteConection)
         {
             _Asyncconnection = sqlliteConection.GetConnectionAsync();
