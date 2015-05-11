@@ -35,10 +35,15 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Folder Include="Network\" />
+    <Folder Include="Services\Geolocation\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsyncLock.cs" />
-    <Compile Include="Network\NetworkStatus.cs" />
+    <Compile Include="DateTime\PersianDateTime.cs" />
+    <Compile Include="Services\Device\IDevice.cs" />
+    <Compile Include="Services\Network\INetwork.cs" />
+    <Compile Include="Services\Network\NetworkStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

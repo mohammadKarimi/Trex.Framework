@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Extensions\LayoutOptionsExtensions.cs" />
     <Compile Include="Extensions\TextAlignmentExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controls\TxEntry\TxEntry.cs" />
