@@ -31,10 +31,8 @@
             BindableProperty.Create<TxCheckBox, double>(
                 p => p.FontSize, -1);
 
-     
-        public static readonly BindableProperty FontNameProperty =
-            BindableProperty.Create<TxCheckBox, string>(
-                p => p.FontName, string.Empty);
+
+        public static readonly BindableProperty FontProperty = BindableProperty.Create<TxCheckBox, Font>(p => p.Font, new Font());
 
         public event EventHandler<EventArgs<bool>> CheckedChanged;
 
@@ -67,7 +65,7 @@
                 this.SetValue(CheckedTextProperty, value);
             }
         }
-   
+
         public string UncheckedText
         {
             get
@@ -80,7 +78,7 @@
                 this.SetValue(UncheckedTextProperty, value);
             }
         }
- 
+
         public string DefaultText
         {
             get
@@ -106,7 +104,7 @@
                 this.SetValue(TextColorProperty, value);
             }
         }
- 
+
         public double FontSize
         {
             get
@@ -119,15 +117,15 @@
             }
         }
 
-        public string FontName
+        public Font Font
         {
             get
             {
-                return (string)GetValue(FontNameProperty);
+                return (Font)GetValue(FontProperty);
             }
             set
             {
-                SetValue(FontNameProperty, value);
+                SetValue(FontProperty, value);
             }
         }
         public string Text
