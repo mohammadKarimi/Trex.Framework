@@ -37,7 +37,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Controls\TxButton\TxButton.cs" />
-    <Compile Include="Controls\TxCheckBox\TxCheckBox.cs" />
     <Compile Include="Controls\TxEntry\TxEntry.cs" />
     <Compile Include="Extensions\BindableObjectExtensions.cs" />
     <Compile Include="Extensions\LayoutOptionsExtensions.cs" />
