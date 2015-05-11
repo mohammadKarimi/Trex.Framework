@@ -35,7 +35,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Folder Include="Network\" />
     <Folder Include="Services\Geolocation\" />
   </ItemGroup>
   <ItemGroup>
