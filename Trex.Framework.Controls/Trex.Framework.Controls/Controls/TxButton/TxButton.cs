@@ -3,6 +3,5 @@
     using Xamarin.Forms;
     public class TxButton : Button
     {
-
     }
 }
