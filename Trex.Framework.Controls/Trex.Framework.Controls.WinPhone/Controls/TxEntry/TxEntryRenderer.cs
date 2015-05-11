@@ -16,7 +16,6 @@ namespace Trex.Framework.Controls.WinPhone.Controls
     {
         private PasswordBox _passwordBox;
         private PhoneTextBox _phoneTextBox;
-
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
         {
             base.OnElementChanged(e);
@@ -45,11 +44,13 @@ namespace Trex.Framework.Controls.WinPhone.Controls
             if (e.PropertyName == TxEntry.PlaceholderTextColorProperty.PropertyName)
                 this.SetPlaceholderTextColor(view);
         }
-
         #region Customized Method
         private void SetFont(TxEntry view)
         {
             if (view.Font != Font.Default)
+            {
+                //Text Me
+                view.Font = Font.OfSize(string.Format(@"\Assets\Fonts\{0}.ttf#{1}", view.Font.FontFamily, view.Font.FontFamily), view.Font.FontSize);
                 if (view.IsPassword)
                 {
                     if (_passwordBox != null)
@@ -64,6 +65,7 @@ namespace Trex.Framework.Controls.WinPhone.Controls
                         _phoneTextBox.FontSize = view.Font.GetHeight();
                     }
                 }
+            }
         }
         private void SetXAlign(TxEntry view)
         {
