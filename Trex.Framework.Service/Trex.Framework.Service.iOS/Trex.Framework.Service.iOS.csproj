@@ -123,6 +123,12 @@
     </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core.csproj">
+      <Project>{42076c76-8e1c-460e-9d72-898ed5fb33cb}</Project>
+      <Name>Trex.Framework.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\Trex.Framework.Service\Trex.Framework.Service.projitems" Label="Shared" Condition="Exists('..\Trex.Framework.Service\Trex.Framework.Service.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

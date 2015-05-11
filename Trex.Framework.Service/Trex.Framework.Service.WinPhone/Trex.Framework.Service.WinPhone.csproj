@@ -128,6 +128,12 @@
     <Content Include="Assets\Tiles\FlipCycleTileMedium.png" />
     <Content Include="Assets\Tiles\FlipCycleTileSmall.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core.csproj">
+      <Project>{42076c76-8e1c-460e-9d72-898ed5fb33cb}</Project>
+      <Name>Trex.Framework.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\Trex.Framework.Service\Trex.Framework.Service.projitems" Label="Shared" Condition="Exists('..\Trex.Framework.Service\Trex.Framework.Service.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
