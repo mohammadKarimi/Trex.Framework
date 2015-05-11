@@ -1,7 +1,7 @@
 ﻿namespace Trex.Framework.Core.Services.Device
 {
     using System;
-    public class IDevice
+    public interface IDevice
     {
         string DeviceId { get; }
         int ScreenWidth { get; }
