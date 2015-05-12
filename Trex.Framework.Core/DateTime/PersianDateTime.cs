@@ -7,21 +7,21 @@
         /// <summary>
         /// System.TimeZoneInfo دریافت تایم زون ایران و قرار دادن آن در آبجکت
         /// </summary>
-        private  TimeZoneInfo PersianTimeZoneInfo;// = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
-        private  Calendar _persianCalendar;
+        private TimeZoneInfo PersianTimeZoneInfo;// = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
+        private Calendar _persianCalendar;
 
 
-        private readonly  string[] _dayNames = new string[] { "شنبه", "یکشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنج شنبه", "جمعه" };
-        private readonly  string[] _monthNames = new string[] { "فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند" };
+        private readonly string[] _dayNames = new string[] { "شنبه", "یکشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنج شنبه", "جمعه" };
+        private readonly string[] _monthNames = new string[] { "فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند" };
 
-        private  string AM = "ق.ظ";
-        private  string PM = "ب.ظ";
+        private string AM = "ق.ظ";
+        private string PM = "ب.ظ";
 
-        private  PersianDateTimeMode Mode = PersianDateTimeMode.UtcOffset;
-        private  TimeSpan DaylightSavingTimeStart = TimeSpan.FromDays(1);
-        private  TimeSpan DaylightSavingTimeEnd = TimeSpan.FromDays(185);
-        private  TimeSpan DaylightSavingTime = TimeSpan.FromHours(1);
-        private  TimeSpan OffsetFromUtc = new TimeSpan(3, 30, 0);
+        private PersianDateTimeMode Mode = PersianDateTimeMode.UtcOffset;
+        private TimeSpan DaylightSavingTimeStart = TimeSpan.FromDays(1);
+        private TimeSpan DaylightSavingTimeEnd = TimeSpan.FromDays(185);
+        private TimeSpan DaylightSavingTime = TimeSpan.FromHours(1);
+        private TimeSpan OffsetFromUtc = new TimeSpan(3, 30, 0);
 
 
         /// <summary>
@@ -30,112 +30,19 @@
         /// <param name="d1">تاریخ شمسی اولی</param>
         /// <param name="d2">تاریخ شمسی دومی</param>
         /// <returns>میزان فاصله ی بین این 2 تاریخ</returns>
-        public  TimeSpan operator -(PersianDateTime d1, PersianDateTime d2)
+        public static TimeSpan operator -(PersianDateTime d1, PersianDateTime d2)
         {
             return d1.ToDateTime() - d2.ToDateTime();
         }
 
-        /// <summary>
-        /// مقایسه 2 تا تاریخ شمسی با یکدیگر
-        /// </summary>
-        /// <param name="d1">تاریخ شمسی اولی</param>
-        /// <param name="d2">تاریخ شمسی دومی</param>
-        /// <returns>False چنانچه مقدار اولی بزرگتر باشد در غیر این صورت True </returns>
-        public  bool operator >(PersianDateTime d1, PersianDateTime d2)
-        {
-            return d1.ToDateTime() > d2.ToDateTime();
-        }
 
-        /// <summary>
-        /// مقایسه 2 تا تاریخ شمسی با یکدیگر   /// </summary>
-        /// <param name="d1">تاریخ شمسی اولی</param>
-        /// <param name="d2">تاریخ شمسی دومی</param>
-        /// <returns>False چنانچه مقدار اولی بزرگتر و یا مساوی باشد در غیر این صورت True </returns>
-        public  bool operator >=(PersianDateTime d1, PersianDateTime d2)
-        {
-            return d1.ToDateTime() >= d2.ToDateTime();
-        }
-
-        /// <summary>
-        /// مقایسه 2 تا تاریخ شمسی با یکدیگر   
-        /// </summary>
-        /// <param name="d1">تاریخ شمسی اولی</param>
-        /// <param name="d2">تاریخ شمسی دومی</param>
-        /// <returns>False چنانچه مقدار اولی کوچکتر و یا مساوی باشد در غیر این صورت True </returns>
-        public  bool operator <=(PersianDateTime d1, PersianDateTime d2)
-        {
-            return d1.ToDateTime() <= d2.ToDateTime();
-        }
-
-        /// <summary>
-        /// کم کردن زمانی از تاریخ شمسی
-        /// </summary>
-        /// <param name="d">تاریخ شمسی</param>
-        /// <param name="t">زمان</param>
-        /// <returns>تاریخ شمسی کسر شده</returns>
-        public  PersianDateTime operator -(PersianDateTime d, TimeSpan t)
-        {
-            return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, d.ToDateTime() - t);
-        }
-
-        /// <summary>
-        /// اضافه کردن زمانی به تاریخ شمسی
-        /// </summary>
-        /// <param name="d">تاریخ شمسی</param>
-        /// <param name="t">زمان</param>
-        /// <returns>تاریخ شمسی اضافه شده</returns>
-        public  PersianDateTime operator +(PersianDateTime d, TimeSpan t)
-        {
-            return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, d.ToDateTime() + t);
-        }
-
-        /// <summary>
-        /// مقایسه 2 تا تاریخ شمسی با یکدیگر   
-        /// </summary>
-        /// <param name="d1">تاریخ شمسی اولی</param>
-        /// <param name="d2">تاریخ شمسی دومی</param>
-        /// <returns>False چنانچه مقدار اولی کوچکتر باشد در غیر این صورت True </returns>
-        public  bool operator <(PersianDateTime d1, PersianDateTime d2)
-        {
-            return d1.ToDateTime() < d2.ToDateTime();
-        }
-
-        /// <summary>
-        /// مقایسه 2 تا تاریخ شمسی با یکدیگر   
-        /// </summary>
-        /// <param name="d1">تاریخ شمسی اولی</param>
-        /// <param name="d2">تاریخ شمسی دومی</param>
-        /// <returns>False چنانچه مقدار اولی دقیقابا مقدار دومی یکسان باشد(هم در تاریخ و هم در زمان ) در غیر این صورت True </returns>
-        public  bool operator ==(PersianDateTime d1, PersianDateTime d2)
-        {
-            if (object.ReferenceEquals(d1, null))
-            {
-                return object.ReferenceEquals(d2, null);
-            }
-            if (object.ReferenceEquals(d2, null))
-            {
-                return false;
-            }
-            return d1.ToDateTime() == d2.ToDateTime();
-        }
-
-        /// <summary>
-        /// مقایسه 2 تا تاریخ شمسی با یکدیگر   
-        /// </summary>
-        /// <param name="d1">تاریخ شمسی اولی</param>
-        /// <param name="d2">تاریخ شمسی دومی</param>
-        /// <returns>False چنانچه مقدار اولی مخالف مقدار دوم باشد در غیر این صورت True </returns>
-        public  bool operator !=(PersianDateTime d1, PersianDateTime d2)
-        {
-            return !(d1 == d2);
-        }
 
         /// <summary>
         /// دریافت نام ماه درخواستی
         /// </summary>
         /// <param name="month">عدد ماه بین 1 تا 12</param>
         /// <returns>نام ماه درخواستی</returns>
-        public  string GetMonthName(int month)
+        public string GetMonthName(int month)
         {
             return _monthNames[month + 1];
         }
@@ -145,7 +52,7 @@
         /// </summary>
         /// <param name="day">عدد روز بین 0 تا 6</param>
         /// <returns>نام روز درخواستی</returns>
-        public  string GetDayName(int day)
+        public string GetDayName(int day)
         {
             return _dayNames[day];
         }
@@ -155,7 +62,7 @@
         /// </summary>
         /// <param name="year">عدد سال ورودی بین 1 تا 9378</param>
         /// <returns>بلی ، در صورتی که سال درخواستی سال کبیسه باشد</returns>
-        public  bool IsLeapYear(int year)
+        public bool IsLeapYear(int year)
         {
             return _persianCalendar.IsLeapYear(year);
         }
@@ -165,17 +72,17 @@
         /// </summary>
         /// <param name="year">عدد سال ورودی بین 1 تا 9378</param>
         /// <returns>چنانچه سال معمولی باشد عدد 365 بازگردانده می شود در غیر این صورت 366</returns>
-        public  int GetDaysInYear(int year)
+        public int GetDaysInYear(int year)
         {
             return _persianCalendar.GetDaysInYear(year);
         }
 
-      
+
 
         /// <summary>
         /// Gets a PersianDateTime object that is set to the current date and time in the persian calendar on this computer.
         /// </summary>
-        public  PersianDateTime Now
+        public PersianDateTime Now
         {
             get
             {
@@ -201,7 +108,7 @@
         ///تبدیل تاریخ میلادی به شمسی
         /// </summary>
         /// <param name="miladiDate">تاریخ میلادی</param>
-        public  PersianDateTime Parse(DateTime miladiDate)
+        public PersianDateTime Parse(DateTime miladiDate)
         {
             return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, miladiDate);
         }
@@ -210,7 +117,7 @@
         /// Converts the specified string representation of a date to its PersianDateTime equivalent.
         /// </summary>
         /// <param name="persianDate">A string containing a date to convert.</param>
-        public  PersianDateTime Parse(string persianDate)
+        public PersianDateTime Parse(string persianDate)
         {
             return Parse(persianDate, "0");
         }
@@ -220,7 +127,7 @@
         /// </summary>
         /// <param name="persianDate">A string containing a date to convert.</param>
         /// <param name="time">A string containing a time to convert.</param>
-        public  PersianDateTime Parse(string persianDate, string time)
+        public PersianDateTime Parse(string persianDate, string time)
         {
             return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, int.Parse(persianDate.Replace("/", "")), int.Parse(time.Replace(":", "")));
         }
@@ -316,7 +223,7 @@
             get { return this - FirstDayOfYear; }
         }
 
-        
+
 
         /// <summary>
         /// Initializes a new instance of the PersianDateTime class to a specified dateTime.
@@ -329,7 +236,7 @@
             _dateTime = dateTime;
         }
 
-       
+
 
         /// <summary>
         /// Initializes a new instance of the PersianDateTime class to the specified persian date and time.
@@ -382,9 +289,9 @@
             _dateTime = _persianCalendar.ToDateTime(year, month, day, hour, minute, second, 0);
         }
 
-       
 
-    
+
+
 
         /// <summary>
         /// Gets the day of the year represented by this instance.
@@ -434,7 +341,7 @@
             get { return AddDays(-DayOfYear + 1).Date; }
         }
 
-   
+
 
         /// <summary>
         /// Gets the first day of the month represented by this instance.
@@ -444,7 +351,7 @@
             get { return AddDays(-Day + 1).Date; }
         }
 
-       
+
 
         /// <summary>
         /// Gets the first day of the week represented by this instance.
@@ -454,7 +361,7 @@
             get { return AddDays(-DayOfWeek).Date; }
         }
 
-       
+
         /// <summary>
         /// Returns a new PersianDateTime that adds the specified number of days to the value of this instance.
         /// </summary>
@@ -593,7 +500,7 @@
             return _dateTime.GetHashCode();
         }
 
-   
+
         /// <summary>
         /// Returns a value indicating whether this instance is equal to the specified PersianDateTime instance.
         /// </summary>
@@ -614,7 +521,7 @@
         /// </summary>
         /// <param name="dateTime">تاریخ ورودی به میلادی</param>
         /// <returns>بازگرداندن میزان زمان گذشته از تاریخ ارسالی به فارسی مانند یک دقیقه قبل</returns>
-        public  string GetRelativeTime(DateTime dateTime)
+        public string GetRelativeTime(DateTime dateTime)
         {
             const int SECOND = 1;
             const int MINUTE = 60 * SECOND;
