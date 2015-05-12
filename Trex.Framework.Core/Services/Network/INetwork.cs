@@ -1,4 +1,4 @@
-﻿namespace Trex.Framework.Core.Services.Network
+﻿namespace Trex.Framework.Core.Services
 {
     using System;
     public interface INetwork

@@ -1,4 +1,4 @@
-﻿namespace Trex.Framework.Core.Services.Device
+﻿namespace Trex.Framework.Core.Services
 {
     using System;
     public interface IDevice

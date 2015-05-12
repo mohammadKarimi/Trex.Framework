@@ -47,6 +47,9 @@
     <Compile Include="Services\Network\INetwork.cs" />
     <Compile Include="Services\Network\NetworkStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Screenshot\IScreenshot.cs" />
+    <Compile Include="Services\ToastNotification\IToastNotificatoion.cs" />
+    <Compile Include="Services\ToastNotification\ToastNotificationModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
