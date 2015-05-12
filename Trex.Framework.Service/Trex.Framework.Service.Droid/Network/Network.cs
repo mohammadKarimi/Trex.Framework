@@ -5,7 +5,7 @@ namespace Trex.Framework.Service.Droid.Network
     using Android.Net;
     using System;
     using Trex.Framework.Core.Services.Network;
-    public class Network :BroadcastMonitor, INetwork
+    public class Network : BroadcastMonitor, INetwork
     {
         private Action<NetworkStatus> networkStatusChanged;
         private readonly object lockObject = new object();

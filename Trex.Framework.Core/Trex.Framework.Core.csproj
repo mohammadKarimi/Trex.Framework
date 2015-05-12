@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="AsyncLock.cs" />
     <Compile Include="DateTime\PersianDateTime.cs" />
+    <Compile Include="DateTime\TimeSpanExtension.cs" />
     <Compile Include="Extensions\EventExtensions.cs" />
     <Compile Include="Helper\EventArgs{T}.cs" />
     <Compile Include="Services\Device\IDevice.cs" />
