@@ -18,7 +18,7 @@ namespace Trex.Framework.Service.iOS.Network
                 reachabilityChanged(InternetConnectionStatus());
             }
         }
-        public event Action<NetworkStatus> ReachabilityChanged
+        public event Action<NetworkStatus> NetworkStatusChanged
         {
             add
             {
