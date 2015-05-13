@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Controls\TxButton\TxButtonRenderer.cs" />
     <Compile Include="Controls\TxEntry\TxEntryRendered.cs" />
+    <Compile Include="Controls\TxLabel\TxLabelRenderer.cs" />
     <Compile Include="Extensions\FontExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

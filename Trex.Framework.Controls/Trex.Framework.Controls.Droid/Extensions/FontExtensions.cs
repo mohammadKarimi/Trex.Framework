@@ -91,7 +91,7 @@ namespace Trex.Framework.Controls.Droid.Controls
             //1. Lookup in the cache
             var hashKey = font.ToHasmapKey();
             typeface = TypefaceCache.SharedCache.RetrieveTypeface(hashKey);
- 
+
             //2. If not found, try custom asset folder
             if (typeface == null && !string.IsNullOrEmpty(font.FontFamily))
             {
@@ -106,7 +106,7 @@ namespace Trex.Framework.Controls.Droid.Controls
                     var path = "fonts/" + filename;
                     typeface = Typeface.CreateFromAsset(context.Assets, path);
                 }
-                catch 
+                catch
                 {
                     try
                     {
@@ -130,10 +130,48 @@ namespace Trex.Framework.Controls.Droid.Controls
             TypefaceCache.SharedCache.StoreTypeface(hashKey, typeface);
             return typeface;
         }
-
+        public static Typeface ToExtendedTypeface(this string fontFamily, double fontSize, string namedSize, int fontAttributes, Context context)
+        {
+            Typeface typeface = null;
+            var hashKey = ToHasmapKeyWithFontFamily(fontFamily, fontSize, namedSize, fontAttributes);
+            typeface = TypefaceCache.SharedCache.RetrieveTypeface(hashKey);
+            if (typeface == null && !string.IsNullOrEmpty(fontFamily))
+            {
+                string filename = fontFamily;
+                if (filename.LastIndexOf(".", System.StringComparison.Ordinal) != filename.Length - 4)
+                {
+                    filename = string.Format("{0}.ttf", filename);
+                }
+                try
+                {
+                    var path = "fonts/" + filename;
+                    typeface = Typeface.CreateFromAsset(context.Assets, path);
+                }
+                catch
+                {
+                    try
+                    {
+                        typeface = Typeface.CreateFromFile("fonts/" + filename);
+                    }
+                    catch
+                    {
+                    }
+                }
+            }
+            if (typeface == null)
+            {
+                typeface = Typeface.Default;
+            }
+            TypefaceCache.SharedCache.StoreTypeface(hashKey, typeface);
+            return typeface;
+        }
         private static string ToHasmapKey(this Font font)
         {
             return string.Format("{0}.{1}.{2}.{3}", font.FontFamily, font.FontSize, font.NamedSize, (int)font.FontAttributes);
+        }
+        public static string ToHasmapKeyWithFontFamily(string fontFamily, double fontSize, string namedSize, int fontAttributes)
+        {
+            return string.Format("{0}.{1}.{2}.{3}", fontFamily, fontSize, namedSize, fontAttributes);
         }
     }
 }

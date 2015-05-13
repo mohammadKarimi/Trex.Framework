@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="Controls\TxButton\TxButtonRenderer.cs" />
     <Compile Include="Controls\TxEntry\TxEntryRenderer.cs" />
+    <Compile Include="Controls\TxLabel\TxLabelRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
