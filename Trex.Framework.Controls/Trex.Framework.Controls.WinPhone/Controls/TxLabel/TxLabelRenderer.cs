@@ -1,12 +1,11 @@
+﻿using Xamarin.Forms;
 using Trex.Framework.Controls;
-using Trex.Framework.Controls.Droid;
-using Xamarin.Forms;
-
+using Trex.Framework.Controls.WinPhone;
 
 [assembly: ExportRenderer(typeof(TxLabel), typeof(TxLabelRenderer))]
-namespace Trex.Framework.Controls.Droid
+namespace Trex.Framework.Controls.WinPhone
 {
-    using Xamarin.Forms.Platform.Android;
+    using Xamarin.Forms.Platform.WinPhone;
     public class TxLabelRenderer : LabelRenderer
     {
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
@@ -16,7 +15,9 @@ namespace Trex.Framework.Controls.Droid
         }
         private void SetFont(TxLabel view)
         {
-            Control.Typeface = view.FontFamily.ToExtendedTypeface(view.FontSize, "1", ((int)view.FontAttributes), Context);
+            view.FontFamily = string.Format(@"\Assets\Fonts\{0}.ttf#{1}", view.FontFamily, view.FontFamily);
         }
     }
 }
+
+

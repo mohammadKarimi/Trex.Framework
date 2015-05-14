@@ -1,9 +1,9 @@
 using Trex.Framework.Controls;
-using Trex.Framework.Controls.iOS.Controls;
+using Trex.Framework.Controls.iOS;
 using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(TxEntry), typeof(TxEntryRenderer))]
-namespace Trex.Framework.Controls.iOS.Controls
+namespace Trex.Framework.Controls.iOS
 {
     using Foundation;
     using System;

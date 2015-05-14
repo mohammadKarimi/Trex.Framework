@@ -61,6 +61,10 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core.csproj">
+      <Project>{42076c76-8e1c-460e-9d72-898ed5fb33cb}</Project>
+      <Name>Trex.Framework.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Trex.Framework.Controls\Trex.Framework.Controls.csproj">
       <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
       <Name>Trex.Framework.Controls</Name>

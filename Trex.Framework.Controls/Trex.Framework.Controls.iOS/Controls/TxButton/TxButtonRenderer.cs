@@ -1,12 +1,12 @@
-using Crux.CrossPlatform.iOS.Controls;
-using Trex.Framework.Controls.Controls;
+using Trex.Framework.Controls;
+using Trex.Framework.Controls.iOS;
 using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(TxButton), typeof(TxButtonRenderer))]
-namespace Crux.CrossPlatform.iOS.Controls
+namespace Trex.Framework.Controls.iOS
 {
     using System;
-    using Trex.Framework.Controls.Controls;
+    using Trex.Framework.Controls;
     using UIKit;
     using Xamarin.Forms.Platform.iOS;
     public class TxButtonRenderer : ButtonRenderer

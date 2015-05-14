@@ -1,9 +1,9 @@
 using Xamarin.Forms;
 using Trex.Framework.Controls;
-using Trex.Framework.Controls.Droid.Controls;
+using Trex.Framework.Controls.Droid;
 
 [assembly: ExportRenderer(typeof(TxEntry), typeof(TxEntryRendered))]
-namespace Trex.Framework.Controls.Droid.Controls
+namespace Trex.Framework.Controls.Droid
 {
     using System;
     using Xamarin.Forms.Platform.Android;

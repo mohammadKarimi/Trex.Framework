@@ -1,9 +1,9 @@
 ﻿using Xamarin.Forms;
 using Trex.Framework.Controls;
-using Trex.Framework.Controls.WinPhone.Controls;
+using Trex.Framework.Controls.WinPhone ;
 
 [assembly: ExportRenderer(typeof(TxEntry), typeof(TxEntryRenderer))]
-namespace Trex.Framework.Controls.WinPhone.Controls
+namespace Trex.Framework.Controls.WinPhone
 {
     using Microsoft.Phone.Controls;
     using System.Windows.Controls;

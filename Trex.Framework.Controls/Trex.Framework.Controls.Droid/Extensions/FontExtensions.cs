@@ -1,4 +1,4 @@
-namespace Trex.Framework.Controls.Droid.Controls
+namespace Trex.Framework.Controls.Droid
 {
     using System;
     using System.Collections.Generic;

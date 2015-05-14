@@ -1,9 +1,9 @@
-using Trex.Framework.Controls.Controls;
-using Trex.Framework.Controls.Droid.Controls;
+using Trex.Framework.Controls;
+using Trex.Framework.Controls.Droid;
 using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(TxButton), typeof(TxButtonRenderer))]
-namespace Trex.Framework.Controls.Droid.Controls
+namespace Trex.Framework.Controls.Droid
 {
     using Xamarin.Forms.Platform.Android;
     public class TxButtonRenderer : ButtonRenderer

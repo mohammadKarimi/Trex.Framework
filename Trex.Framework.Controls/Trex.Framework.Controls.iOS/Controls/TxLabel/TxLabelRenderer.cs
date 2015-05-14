@@ -1,9 +1,9 @@
-using Trex.Framework.Controls.Controls;
-using Trex.Framework.Controls.iOS.Controls;
+using Trex.Framework.Controls;
+using Trex.Framework.Controls.iOS;
 using Xamarin.Forms;
 
 [assembly: ExportRenderer(typeof(TxLabel), typeof(TxLabelRenderer))]
-namespace Trex.Framework.Controls.iOS.Controls
+namespace Trex.Framework.Controls.iOS
 {
     using UIKit;
     using Xamarin.Forms.Platform.iOS;

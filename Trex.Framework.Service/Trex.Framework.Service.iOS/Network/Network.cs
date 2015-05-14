@@ -2,7 +2,7 @@ namespace Trex.Framework.Service.iOS.Network
 {
 
     using System;
-    using Trex.Framework.Core.Services.Network;
+    using Trex.Framework.Core.Services;
     public class Network : INetwork
     {
         public NetworkStatus InternetConnectionStatus()
