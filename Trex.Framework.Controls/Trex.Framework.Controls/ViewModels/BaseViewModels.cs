@@ -6,12 +6,6 @@
     using Xamarin.Forms;
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public BaseViewModel(INavigation navigation)
-        {
-            this.Navigation = navigation;
-        }
-        public INavigation Navigation { get; set; }
-
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

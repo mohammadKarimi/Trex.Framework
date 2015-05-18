@@ -9,6 +9,6 @@
             this.IsSuccess = false;
         }
         public bool IsSuccess { get; set; }
-        public IEnumerable<string> Message { get; set; }
+        public string BussinessMessage { get; set; }
     }
 }

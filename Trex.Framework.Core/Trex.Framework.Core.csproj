@@ -45,6 +45,7 @@
     <Compile Include="DateTime\TimeSpanExtension.cs" />
     <Compile Include="Extensions\EventExtensions.cs" />
     <Compile Include="Helper\EventArgs{T}.cs" />
+    <Compile Include="NavigationMessage.cs" />
     <Compile Include="Serializer\ISerializer.cs" />
     <Compile Include="Serializer\IStreamSerializer.cs" />
     <Compile Include="Serializer\IJsonSerializer.cs" />

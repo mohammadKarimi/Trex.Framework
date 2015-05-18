@@ -25,9 +25,11 @@ namespace Framework.Test
 
             button.Clicked += async (s, e) =>
             {
-                var httpClient = new HttpRestClient(new Serializer()); // Xamarin supports HttpClient!
-                var response = await httpClient.PostAsync<HttpActionResult<int>>("http://46.34.96.71/mobileInsurance.api/oauth/signInPost?username=0079445098&password=0079445098"); // async method!
-                Editor.Text =   response.Result.ToString();
+                var HttpRestClient = new HttpRestClient(new Serializer());
+                var response = await HttpRestClient.GetAsync<HttpActionResult<Accounts>>("http://46.34.96.71/mobileInsurance.api/person/getpersonprofilebynationalcode",
+                    new Dictionary<string, string>() { { "nationalCode", "0079445098" } });
+            
+                Editor.Text =   response.Result.AccountsId.ToString();
             };
 
             Content = new StackLayout() { Children = { button, Editor } };
