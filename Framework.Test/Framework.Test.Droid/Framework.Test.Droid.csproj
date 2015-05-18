@@ -55,6 +55,7 @@
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Xamarin.Android.Support.v4">
@@ -85,6 +86,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core.csproj">
+      <Project>{42076c76-8e1c-460e-9d72-898ed5fb33cb}</Project>
+      <Name>Trex.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Test\Framework.Test.csproj">
+      <Project>{31d94055-da1e-43d0-ad3e-81115aa86dbc}</Project>
+      <Name>Framework.Test</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\Framework.Test\Framework.Test.projitems" Label="Shared" Condition="Exists('..\Framework.Test\Framework.Test.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
