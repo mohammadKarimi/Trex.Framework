@@ -11,12 +11,13 @@
     {
         protected readonly ISerializer Serializer;
         protected readonly HttpClient Client;
-        public HttpRestClient(ISerializer serializer)
-            : this(serializer, new HttpClient())
+        public HttpRestClient(ISerializer serializer, string contentType = "application/json")
+            : this(serializer, new HttpClient(), contentType)
         {
         }
-        public HttpRestClient(ISerializer serializer, HttpClient client)
+        public HttpRestClient(ISerializer serializer, HttpClient client, string contentType = "application/json")
         {
+            this.StringContentType = contentType;
             this.Serializer = serializer;
             this.Client = client ?? new HttpClient();
         }
@@ -32,7 +33,7 @@
                 this.Client.Timeout = value;
             }
         }
-        protected string StringContentType { get; set; }
+        public string StringContentType { get; set; }
         public void AddHeader(string key, string value)
         {
             this.Client.DefaultRequestHeaders.Add(key, value);
@@ -41,7 +42,6 @@
         {
             this.Client.DefaultRequestHeaders.Remove(key);
         }
-
         public async Task<T> PostAsync<T>(string url, object dto)
         {
             var content = this.Serializer.Serialize(dto);
@@ -70,7 +70,6 @@
             var response = await this.Client.PostAsync(url, new StringContent("", Encoding.UTF8, this.StringContentType));
             await CheckResponse(response);
         }
-
         public async Task<T> GetAsync<T>(string url)
         {
             var response = await this.Client.GetAsync(url);
@@ -88,7 +87,6 @@
             var response = await this.Client.GetAsync(builder.ToString().TrimEnd('&'));
             return await GetResponse<T>(response, this.Serializer);
         }
-      
         private async Task<T> GetResponse<T>(HttpResponseMessage response, ISerializer serializer)
         {
             response.EnsureSuccessStatusCode();

@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trex.Framework.Service.iOS"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trex.Framework.Controls.iOS", "Trex.Framework.Controls\Trex.Framework.Controls.iOS\Trex.Framework.Controls.iOS.csproj", "{E3AAB956-B5AF-4ABD-BE9A-8C4F2A6ED467}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Test", ".Test", "{107F521B-FCE8-4228-9FEC-119FAC0B1C60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
