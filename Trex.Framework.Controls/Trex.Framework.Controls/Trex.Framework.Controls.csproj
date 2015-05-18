@@ -44,7 +44,6 @@
     <Compile Include="Extensions\TextAlignmentExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BaseViewModels.cs" />
-    <Compile Include="ViewModels\ViewModelNavigation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
