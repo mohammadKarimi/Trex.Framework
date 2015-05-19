@@ -50,6 +50,7 @@
     <Compile Include="Serializer\IStreamSerializer.cs" />
     <Compile Include="Serializer\IJsonSerializer.cs" />
     <Compile Include="Serializer\Serializer.cs" />
+    <Compile Include="Services\Application\IApplicationContext.cs" />
     <Compile Include="Services\Device\IDevice.cs" />
     <Compile Include="Services\Network\INetwork.cs" />
     <Compile Include="Services\Network\NetworkStatus.cs" />

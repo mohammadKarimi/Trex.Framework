@@ -16,7 +16,8 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>
+    </AndroidUseLatestPlatformSdk>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
@@ -25,6 +26,7 @@
     <NuGetPackageImportStamp>bdcffdec</NuGetPackageImportStamp>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkVersion>v4.3</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,6 +55,10 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -71,22 +77,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Network\BroadcastMonitor.cs" />
-    <Compile Include="Network\BroadcastRecieverExtensions.cs" />
-    <Compile Include="Network\Network.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core.csproj">
       <Project>{42076c76-8e1c-460e-9d72-898ed5fb33cb}</Project>
       <Name>Trex.Framework.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="..\Trex.Framework.Service\Trex.Framework.Service.projitems" Label="Shared" Condition="Exists('..\Trex.Framework.Service\Trex.Framework.Service.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
