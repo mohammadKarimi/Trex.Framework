@@ -37,11 +37,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Network\Application\ApplicationContext.cs" />
     <Compile Include="Network\Network.cs" />
-    <Compile Include="Network\Network\BroadcastMonitor.cs" />
-    <Compile Include="Network\Network\BroadcastRecieverExtensions.cs" />
-    <Compile Include="Network\Network\Network.cs" />
     <Compile Include="Network\Reachability.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

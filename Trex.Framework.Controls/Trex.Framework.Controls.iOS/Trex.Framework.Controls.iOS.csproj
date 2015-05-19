@@ -37,10 +37,6 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Controls\Controls\TxButton\TxButtonRenderer.cs" />
-    <Compile Include="Controls\Controls\TxEntry\TxEntryRendered.cs" />
-    <Compile Include="Controls\Controls\TxLabel\TxLabelRenderer.cs" />
-    <Compile Include="Controls\Extensions\FontExtensions.cs" />
     <Compile Include="Controls\TxButton\TxButtonRenderer.cs" />
     <Compile Include="Controls\TxEntry\TxEntryRenderer.cs" />
     <Compile Include="Controls\TxLabel\TxLabelRenderer.cs" />
