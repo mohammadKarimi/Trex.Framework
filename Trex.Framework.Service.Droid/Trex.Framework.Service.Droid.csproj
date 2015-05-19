@@ -45,10 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\ApplicationContext.cs" />
-    <Compile Include="Network\BroadcastMonitor.cs" />
-    <Compile Include="Network\BroadcastRecieverExtensions.cs" />
-    <Compile Include="Network\Network.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

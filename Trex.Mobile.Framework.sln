@@ -32,8 +32,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Test.Droid", "Fra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Test", "Framework.Test\Framework.Test\Framework.Test.csproj", "{31D94055-DA1E-43D0-AD3E-81115AA86DBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trex.Framework.Service.Droid", "Trex.Framework.Service.Droid\Trex.Framework.Service.Droid.csproj", "{FFD1E144-38CB-4980-8DC0-80119D1248C7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -374,38 +372,6 @@ Global
 		{31D94055-DA1E-43D0-AD3E-81115AA86DBC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{31D94055-DA1E-43D0-AD3E-81115AA86DBC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{31D94055-DA1E-43D0-AD3E-81115AA86DBC}.Release|x86.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Ad-Hoc|Mixed Platforms.Build.0 = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.AppStore|ARM.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.AppStore|x86.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Release|ARM.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -418,6 +384,5 @@ Global
 		{E3AAB956-B5AF-4ABD-BE9A-8C4F2A6ED467} = {6B8CD9FB-0EA7-4889-B5BA-1C1E8D717457}
 		{256ECBCB-BEFA-4D03-B82F-CEBEFC8EB6CE} = {107F521B-FCE8-4228-9FEC-119FAC0B1C60}
 		{31D94055-DA1E-43D0-AD3E-81115AA86DBC} = {107F521B-FCE8-4228-9FEC-119FAC0B1C60}
-		{FFD1E144-38CB-4980-8DC0-80119D1248C7} = {B82594FF-9959-4E3A-86D6-19EE17B4B466}
 	EndGlobalSection
 EndGlobal
