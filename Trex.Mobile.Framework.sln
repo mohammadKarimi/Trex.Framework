@@ -34,8 +34,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Test", "Framework
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trex.Framework.Service.Droid", "Trex.Framework.Service\Trex.Framework.Service.Droid\Trex.Framework.Service.Droid.csproj", "{BA8522FB-1FD6-4F26-843A-E8EBACDDCB53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trex.Framework.Controls.Droid", "Trex.Framework.Controls\Trex.Framework.Controls.Droid\Trex.Framework.Controls.Droid.csproj", "{C39AD65C-C69D-4B9D-9487-6A6445A2A923}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -408,46 +406,6 @@ Global
 		{BA8522FB-1FD6-4F26-843A-E8EBACDDCB53}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{BA8522FB-1FD6-4F26-843A-E8EBACDDCB53}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{BA8522FB-1FD6-4F26-843A-E8EBACDDCB53}.Release|x86.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Ad-Hoc|ARM.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Ad-Hoc|Mixed Platforms.Build.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Ad-Hoc|Mixed Platforms.Deploy.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Ad-Hoc|x86.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.AppStore|Any CPU.Deploy.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.AppStore|ARM.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.AppStore|Mixed Platforms.Deploy.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.AppStore|x86.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Debug|Mixed Platforms.Deploy.0 = Debug|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Release|ARM.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -461,6 +419,5 @@ Global
 		{256ECBCB-BEFA-4D03-B82F-CEBEFC8EB6CE} = {107F521B-FCE8-4228-9FEC-119FAC0B1C60}
 		{31D94055-DA1E-43D0-AD3E-81115AA86DBC} = {107F521B-FCE8-4228-9FEC-119FAC0B1C60}
 		{BA8522FB-1FD6-4F26-843A-E8EBACDDCB53} = {B82594FF-9959-4E3A-86D6-19EE17B4B466}
-		{C39AD65C-C69D-4B9D-9487-6A6445A2A923} = {6B8CD9FB-0EA7-4889-B5BA-1C1E8D717457}
 	EndGlobalSection
 EndGlobal
