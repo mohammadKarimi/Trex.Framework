@@ -1,4 +1,4 @@
-﻿namespace Trex.Framework.Core
+﻿namespace Trex.Framework.Controls
 {
     using System;
     public class NavigationMessage
