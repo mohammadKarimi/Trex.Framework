@@ -1,4 +1,4 @@
-﻿namespace Trex.Framework.Controls.Controls.TxLabel
+﻿namespace Trex.Framework.Controls
 {
     using System;
     using Xamarin.Forms;
