@@ -93,6 +93,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Controls\TxButton\TxButtonRenderer.cs" />
+    <Compile Include="Assets\Controls\TxEntry\TxEntryRendered.cs" />
+    <Compile Include="Assets\Controls\TxLabel\TxLabelRenderer.cs" />
+    <Compile Include="Assets\Extensions\FontExtensions.cs" />
     <Compile Include="Controls\TxButton\TxButtonRenderer.cs" />
     <Compile Include="Controls\TxEntry\TxEntryRenderer.cs" />
     <Compile Include="Controls\TxLabel\TxLabelRenderer.cs" />
