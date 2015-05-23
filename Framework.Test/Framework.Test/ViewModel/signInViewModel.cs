@@ -37,5 +37,19 @@ namespace Framework.Test.ViewModel
             }
         }
 
+        private int _DaysOfSyncData { get; set; }
+        public int DaysOfSyncData
+        {
+            get { return _DaysOfSyncData; }
+            set
+            {
+                if (_DaysOfSyncData == value)
+                    return;
+                _DaysOfSyncData = value;
+                OnPropertyChanged();
+            }
+        }
+
+
     }
 }

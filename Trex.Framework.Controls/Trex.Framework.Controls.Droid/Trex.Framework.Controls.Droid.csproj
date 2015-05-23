@@ -67,6 +67,7 @@
     <Compile Include="Controls\TxEntry\TxEntryRendered.cs" />
     <Compile Include="Controls\TxLabel\TxIconLabelRenderer.cs" />
     <Compile Include="Controls\TxLabel\TxLabelRenderer.cs" />
+    <Compile Include="Controls\TxProgressBar\TxProgressBarRenderer.cs" />
     <Compile Include="Extensions\FontExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

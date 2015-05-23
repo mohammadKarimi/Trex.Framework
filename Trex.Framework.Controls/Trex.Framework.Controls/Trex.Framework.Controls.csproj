@@ -41,6 +41,7 @@
     <Compile Include="Controls\TxLabel\FontAwesomeIcon.cs" />
     <Compile Include="Controls\TxLabel\TxIconLabel.cs" />
     <Compile Include="Controls\TxLabel\TxLabel.cs" />
+    <Compile Include="Controls\TxProgressBar\TxProgressBar.cs" />
     <Compile Include="Extensions\BindableObjectExtensions.cs" />
     <Compile Include="Extensions\LayoutOptionsExtensions.cs" />
     <Compile Include="Extensions\TextAlignmentExtension.cs" />

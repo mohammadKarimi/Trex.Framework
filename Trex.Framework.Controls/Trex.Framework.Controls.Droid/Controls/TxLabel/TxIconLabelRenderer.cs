@@ -12,16 +12,16 @@ namespace Trex.Framework.Controls.Droid
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
         {
             base.OnElementChanged(e);
-            this.SetFont((TxLabel)Element);
+            this.SetFont((TxIconLabel)Element);
         }
+
         protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
-            var view = (TxLabel)Element;
-            if (e.PropertyName == TxLabel.FontProperty.PropertyName)
-                this.SetFont(view);
+            if (e.PropertyName == TxLabel.TextProperty.PropertyName)
+                this.SetFont((TxIconLabel)Element);
         }
-        private void SetFont(TxLabel view)
+        private void SetFont(TxIconLabel view)
         {
             Control.Typeface = view.FontFamily.ToExtendedTypeface(view.FontSize, "1", ((int)view.FontAttributes), Context);
         }

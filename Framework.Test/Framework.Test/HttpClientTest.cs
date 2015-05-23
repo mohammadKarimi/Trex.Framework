@@ -19,6 +19,27 @@ namespace Framework.Test
         {
             this.BindingContext = new signInViewModel();
             this.Send();
+
+            var TxProgressBar = new TxProgressBar()
+            {
+                Indeterminate = true
+            };
+
+            var DaysOfSyncDataValueSlider = new TxLabel()
+            {
+                FontFamily = "Byekan",
+                HorizontalOptions = LayoutOptionsExtensions.End,
+            };
+            DaysOfSyncDataValueSlider.SetBinding(Label.TextProperty, new Binding("DaysOfSyncData", BindingMode.OneWay));
+
+            var DaysOfSyncDataSlider = new Slider()
+            {
+                Maximum = 30,
+                Minimum = 1,
+
+            };
+            DaysOfSyncDataSlider.SetBinding(Slider.ValueProperty, new Binding("DaysOfSyncData", BindingMode.TwoWay));
+
             var button = new Button
             {
                 Text = "Click Me!",
@@ -28,7 +49,7 @@ namespace Framework.Test
             };
 
             Editor Editor = new Editor() { };
-            Content = new StackLayout() { Children = { button, Editor } };
+            Content = new StackLayout() { Children = {TxProgressBar, DaysOfSyncDataValueSlider, DaysOfSyncDataSlider, button, Editor } };
         }
         private void Send()
         {

@@ -80,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\Byekan.ttf" />
+    <AndroidAsset Include="Assets\fonts\FontAwesome.ttf" />
+    <AndroidAsset Include="Assets\fonts\MaterialDesign.ttf" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
@@ -91,6 +94,14 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Trex.Framework.Controls\Trex.Framework.Controls.Droid\Trex.Framework.Controls.Droid.csproj">
+      <Project>{e29d082e-73a6-41b7-9f17-8638f6159619}</Project>
+      <Name>Trex.Framework.Controls.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Trex.Framework.Controls\Trex.Framework.Controls\Trex.Framework.Controls.csproj">
+      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
+      <Name>Trex.Framework.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core.csproj">
       <Project>{42076c76-8e1c-460e-9d72-898ed5fb33cb}</Project>
       <Name>Trex.Framework.Core</Name>
