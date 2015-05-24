@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\TxSeparator\TxSeparatorDroidView.cs" />
+    <Compile Include="Controls\TxSeparator\TxSeparatorRenderer.cs" />
     <Compile Include="Controls\TxButton\TxButtonRenderer.cs" />
     <Compile Include="Controls\TxEntry\TxEntryRendered.cs" />
     <Compile Include="Controls\TxLabel\TxIconLabelRenderer.cs" />
