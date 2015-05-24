@@ -37,6 +37,8 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Controls\TxSeparator\TxSeparatorRenderer.cs" />
+    <Compile Include="Controls\TxSeparator\UITxSeparator.cs" />
     <Compile Include="Controls\TxButton\TxButtonRenderer.cs" />
     <Compile Include="Controls\TxEntry\TxEntryRenderer.cs" />
     <Compile Include="Controls\TxLabel\TxLabelRenderer.cs" />
