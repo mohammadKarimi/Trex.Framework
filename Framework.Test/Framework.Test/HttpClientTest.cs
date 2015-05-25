@@ -18,7 +18,7 @@ namespace Framework.Test
         public HttpClientTest()
         {
             this.BindingContext = new signInViewModel();
-            this.Send();
+
 
             var TxProgressBar = new TxProgressBar()
             {
@@ -30,6 +30,12 @@ namespace Framework.Test
                 FontFamily = "Byekan",
                 HorizontalOptions = LayoutOptionsExtensions.End,
             };
+
+            var mat = new TxIconLabel("\uf1db", TxFontIcons.MaterialDesign)
+            {
+
+            };
+
             DaysOfSyncDataValueSlider.SetBinding(Label.TextProperty, new Binding("DaysOfSyncData", BindingMode.OneWay));
 
             var DaysOfSyncDataSlider = new Slider()
@@ -49,12 +55,8 @@ namespace Framework.Test
             };
 
             Editor Editor = new Editor() { };
-            Content = new StackLayout() { Children = {TxProgressBar, DaysOfSyncDataValueSlider, DaysOfSyncDataSlider, button, Editor } };
+            Content = new StackLayout() { Children = { mat, TxProgressBar, DaysOfSyncDataValueSlider, DaysOfSyncDataSlider, button, Editor } };
         }
-        private void Send()
-        {
-            MessagingCenter.Send<NavigationMessage>(new NavigationMessage() { Parameter = this }, NavigationMessageType.Page.ToString());
-            MessagingCenter.Send<NavigationMessage>(new NavigationMessage() { Parameter = this.Navigation }, NavigationMessageType.Navigation.ToString());
-        }
+
     }
 }

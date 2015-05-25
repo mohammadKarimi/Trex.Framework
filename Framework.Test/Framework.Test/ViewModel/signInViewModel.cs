@@ -21,8 +21,7 @@ namespace Framework.Test.ViewModel
 
         private async Task SignIn()
         {
-            var a = Navigation;
-            await Page.DisplayAlert("sad", "asdf", "asdf");
+            
         }
 
         public ICommand SignInCommand

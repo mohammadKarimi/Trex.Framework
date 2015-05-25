@@ -5,13 +5,21 @@
     using System.Collections.Generic;
     public class NavigationService : INavigationService
     {
+
+        public INavigation Navigation { get; set; }
+        public Page Page { get; set; }
         public Task<string> DisplayActionSheet(string title, string cancel, string destruction, params string[] buttons)
         {
             return Page.DisplayActionSheet(title, cancel, destruction, buttons);
         }
-        public INavigation Navigation { get; set; }
-        public Page Page { get; set; }
-
+        public Task<bool> DisplayAlert(string title, string message, string accept, string cancel = null)
+        {
+            return Page.DisplayAlert(title, message, accept, cancel);
+        }
+        public Task DisplayAlert(string title, string message, string cancel)
+        {
+            return Page.DisplayAlert(title, message, cancel);
+        }
         public Task<Page> PopAsync()
         {
             return Navigation.PopAsync();
@@ -37,10 +45,7 @@
             return Navigation.PushModalAsync(page);
         }
 
-        public Task<bool> DisplayAlert(string title, string message, string accept, string cancel = null)
-        {
-            return Page.DisplayAlert(title, message, accept, cancel);
-        }
+
 
         public void InsertPageBefore(Page page, Page before)
         {
@@ -86,5 +91,7 @@
         {
             Navigation.RemovePage(page);
         }
+
+
     }
 }

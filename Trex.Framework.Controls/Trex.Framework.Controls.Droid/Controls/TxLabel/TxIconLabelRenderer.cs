@@ -5,6 +5,7 @@ using Xamarin.Forms;
 [assembly: ExportRenderer(typeof(TxIconLabel), typeof(TxIconLabelRenderer))]
 namespace Trex.Framework.Controls.Droid
 {
+    using Android.Graphics;
     using System;
     using Xamarin.Forms.Platform.Android;
     public class TxIconLabelRenderer : LabelRenderer

@@ -4,7 +4,7 @@
     using Xamarin.Forms;
     public class TxIconLabel : Label
     {
-        public TxIconLabel(string text, TxFontIcons font = TxFontIcons.FontAwesome)
+        public TxIconLabel(string text, TxFontIcons font = TxFontIcons.MaterialDesign)
         {
             this.Text = text;
             this.FontFamily = font.ToString();

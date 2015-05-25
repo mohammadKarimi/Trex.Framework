@@ -82,7 +82,9 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\fonts\Byekan.ttf" />
     <AndroidAsset Include="Assets\fonts\FontAwesome.ttf" />
-    <AndroidAsset Include="Assets\fonts\MaterialDesign.ttf" />
+    <AndroidAsset Include="Assets\fonts\MaterialDesign.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />

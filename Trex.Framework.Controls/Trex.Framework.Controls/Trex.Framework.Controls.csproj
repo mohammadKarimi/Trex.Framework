@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="Controls\TxButton\TxButton.cs" />
     <Compile Include="Controls\TxEntry\TxEntry.cs" />
+    <Compile Include="Controls\TxLabel\MaterialDesignIcon.cs" />
     <Compile Include="Controls\TxLabel\FontAwesomeIcon.cs" />
     <Compile Include="Controls\TxLabel\TxIconLabel.cs" />
     <Compile Include="Controls\TxLabel\TxLabel.cs" />
