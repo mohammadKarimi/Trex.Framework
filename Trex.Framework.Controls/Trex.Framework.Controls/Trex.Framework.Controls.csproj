@@ -43,6 +43,7 @@
     <Compile Include="Controls\TxLabel\TxLabel.cs" />
     <Compile Include="Controls\TxProgressBar\TxProgressBar.cs" />
     <Compile Include="Controls\TxSeparator\TxSeparator.cs" />
+    <Compile Include="Converter\ReverseConverter.cs" />
     <Compile Include="Extensions\BindableObjectExtensions.cs" />
     <Compile Include="Extensions\LayoutOptionsExtensions.cs" />
     <Compile Include="Extensions\TextAlignmentExtension.cs" />
@@ -61,6 +62,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
