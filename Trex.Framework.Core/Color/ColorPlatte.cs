@@ -20,12 +20,12 @@
             }
             public static class Red
             {
-                public static string Lighten5 = "ffebee ";
-                public static string Lighten4 = "ffcdd2 ";
-                public static string Lighten3 = "ef9a9a ";
-                public static string Lighten2 = "e57373 ";
-                public static string Lighten1 = "ef5350 ";
-                public static string RedPlatte = "f44336 ";
+                public static string Lighten5 = "ffebee";
+                public static string Lighten4 = "ffcdd2";
+                public static string Lighten3 = "ef9a9a";
+                public static string Lighten2 = "e57373";
+                public static string Lighten1 = "ef5350";
+                public static string RedPlatte = "f44336";
                 public static string Darken1 = "e53935";
                 public static string Darken2 = "d32f2f";
                 public static string Darken3 = "c62828";
