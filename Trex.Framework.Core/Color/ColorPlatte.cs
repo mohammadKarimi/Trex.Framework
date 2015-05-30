@@ -6,11 +6,12 @@
         {
             public static class Gray
             {
-                public static string Lighten5 = "fafafa";
-                public static string Lighten4 = "f5f5f5";
-                public static string Lighten3 = "eeeeee";
-                public static string Lighten2 = "e0e0e0";
-                public static string Lighten1 = "bdbdbd";
+                public static string Lighten6 = "fafafa";
+                public static string Lighten5 = "f5f5f5";
+                public static string Lighten4 = "eeeeee";
+                public static string Lighten3 = "e0e0e0";
+                public static string Lighten2 = "bdbdbd";
+                public static string Lighten1 = "e9e9e9";
                 public static string GrayPlatte = "9e9e9e";
                 public static string Darken1 = "757575";
                 public static string Darken2 = "616161";

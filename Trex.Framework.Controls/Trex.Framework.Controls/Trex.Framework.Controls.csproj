@@ -46,8 +46,9 @@
     <Compile Include="Controls\TxSeparator\TxSeparator.cs" />
     <Compile Include="Converter\ReverseConverter.cs" />
     <Compile Include="Extensions\BindableObjectExtensions.cs" />
-    <Compile Include="Extensions\LayoutOptionsExtensions.cs" />
+    <Compile Include="Extensions\HorizontalOptionsExtensions.cs" />
     <Compile Include="Extensions\TextAlignmentExtension.cs" />
+    <Compile Include="Extensions\VerticalOptionsExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BaseViewModels.cs" />
     <Compile Include="ViewModels\NavigationMessage.cs" />

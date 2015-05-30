@@ -2,7 +2,7 @@
 {
     using System;
     using Xamarin.Forms;
-    public static class LayoutOptionsExtensions
+    public static class HorizontalOptionsExtensions
     {
         public static LayoutOptions Center { get { return LayoutOptions.Center; } }
         public static LayoutOptions CenterAndExpand { get { return LayoutOptions.CenterAndExpand; } }
