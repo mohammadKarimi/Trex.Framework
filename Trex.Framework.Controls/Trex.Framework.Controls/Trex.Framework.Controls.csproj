@@ -44,6 +44,7 @@
     <Compile Include="Controls\TxLabel\TxLabel.cs" />
     <Compile Include="Controls\TxProgressBar\TxProgressBar.cs" />
     <Compile Include="Controls\TxSeparator\TxSeparator.cs" />
+    <Compile Include="Converter\CurrencySeperatorConverter.cs" />
     <Compile Include="Converter\ReverseConverter.cs" />
     <Compile Include="Extensions\BindableObjectExtensions.cs" />
     <Compile Include="Extensions\HorizontalOptionsExtensions.cs" />
