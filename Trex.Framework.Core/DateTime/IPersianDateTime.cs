@@ -1,19 +1,20 @@
 ﻿namespace Trex.Framework.Core.DateTime
 {
     using System;
-    interface IPersianDateTimen
+    public interface IPersianDateTime
     {
-        IPersianDateTimen Add(TimeSpan value);
-        IPersianDateTimen AddDays(double value);
-        IPersianDateTimen Date { get; }
+        DateTime _dateTime { get; set; }
+        IPersianDateTime Add(TimeSpan value);
+        IPersianDateTime AddDays(double value);
+        IPersianDateTime Date { get; }
         int Day { get; }
         string DayName { get; }
         int DayOfWeek { get; }
         int DayOfYear { get; }
-        bool Equals(IPersianDateTimen value);
-        IPersianDateTimen FirstDayOfMonth { get; }
-        IPersianDateTimen FirstDayOfWeek { get; }
-        IPersianDateTimen FirstDayOfYear { get; }
+        bool Equals(IPersianDateTime value);
+        IPersianDateTime FirstDayOfMonth { get; }
+        IPersianDateTime FirstDayOfWeek { get; }
+        IPersianDateTime FirstDayOfYear { get; }
         string GetDayName(int day);
         int GetDaysInYear(int year);
         int GetHashCode();
@@ -25,14 +26,14 @@
         int Minute { get; }
         int Month { get; }
         string MonthName { get; }
-        IPersianDateTimen Now { get; }
-        IPersianDateTimen Parse(DateTime miladiDate);
-        IPersianDateTimen Parse(string persianDate);
-        IPersianDateTimen Parse(string persianDate, string time);
+        IPersianDateTime Now { get; }
+        IPersianDateTime Parse(DateTime miladiDate);
+        IPersianDateTime Parse(string persianDate);
+        IPersianDateTime Parse(string persianDate, string time);
         int Second { get; }
         long Ticks { get; }
         TimeSpan TimeOfDay { get; }
-        TimeSpan TimeOfYear { get; }
+
         DateTime ToDateTime();
         int ToInt();
         string ToString();

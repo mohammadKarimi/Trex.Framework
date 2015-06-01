@@ -1,21 +1,25 @@
-﻿namespace Trex.Framework.Core.DateTime
+﻿using Trex.Framework.Service.Droid.DateTime;
+
+[assembly: Xamarin.Forms.Dependency(typeof(PersianDateTime))]
+namespace Trex.Framework.Service.Droid.DateTime
 {
     using System;
     using System.Globalization;
-    public class PersianDateTime : Trex.Framework.Service.Droid.DateTime.IPersianDateTime  
+    using Trex.Framework.Core.DateTime;
+    public class PersianDateTime : IPersianDateTime
     {
         /// <summary>
         /// System.TimeZoneInfo دریافت تایم زون ایران و قرار دادن آن در آبجکت
         /// </summary>
         public TimeZoneInfo PersianTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
         public Calendar _persianCalendar = new PersianCalendar();
-       
+
         public readonly string[] _dayNames = new string[] { "شنبه", "یکشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنج شنبه", "جمعه" };
         public readonly string[] _monthNames = new string[] { "فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند" };
-        
+
         public string AM = "ق.ظ";
         public string PM = "ب.ظ";
-    
+
         public PersianDateTimeMode Mode = PersianDateTimeMode.UtcOffset;
         public TimeSpan DaylightSavingTimeStart = TimeSpan.FromDays(1);
         public TimeSpan DaylightSavingTimeEnd = TimeSpan.FromDays(185);
@@ -77,25 +81,18 @@
         }
 
 
-
-        /// <summary>
-        /// Gets a PersianDateTime object that is set to the current date and time in the persian calendar on this computer.
-        /// </summary>
-        public PersianDateTime Now
+        public IPersianDateTime Now
         {
             get
             {
                 switch (Mode)
                 {
                     case PersianDateTimeMode.System:
-                        return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, DateTime.Now);
+                        return new PersianDateTime(DateTime.Now);
 
                     case PersianDateTimeMode.PersianTimeZoneInfo:
-                        return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, TimeZoneInfo.ConvertTime(DateTime.Now, PersianTimeZoneInfo));
+                        return new PersianDateTime(TimeZoneInfo.ConvertTime(DateTime.Now, PersianTimeZoneInfo));
 
-                    case PersianDateTimeMode.UtcOffset:
-                        PersianDateTime now = new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, DateTime.UtcNow.Add(OffsetFromUtc));
-                        return now.IsInDaylightSavingTime ? now.Add(DaylightSavingTime) : now;
 
                     default:
                         throw new NotSupportedException(Mode.ToString());
@@ -107,16 +104,16 @@
         ///تبدیل تاریخ میلادی به شمسی
         /// </summary>
         /// <param name="miladiDate">تاریخ میلادی</param>
-        public PersianDateTime Parse(DateTime miladiDate)
+        public IPersianDateTime Parse(DateTime miladiDate)
         {
-            return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, miladiDate);
+            return new PersianDateTime(miladiDate);
         }
 
         /// <summary>
         /// Converts the specified string representation of a date to its PersianDateTime equivalent.
         /// </summary>
         /// <param name="persianDate">A string containing a date to convert.</param>
-        public PersianDateTime Parse(string persianDate)
+        public IPersianDateTime Parse(string persianDate)
         {
             return Parse(persianDate, "0");
         }
@@ -126,12 +123,12 @@
         /// </summary>
         /// <param name="persianDate">A string containing a date to convert.</param>
         /// <param name="time">A string containing a time to convert.</param>
-        public PersianDateTime Parse(string persianDate, string time)
+        public IPersianDateTime Parse(string persianDate, string time)
         {
-            return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, int.Parse(persianDate.Replace("/", "")), int.Parse(time.Replace(":", "")));
+            return new PersianDateTime(int.Parse(persianDate.Replace("/", "")), int.Parse(time.Replace(":", "")));
         }
 
-        private readonly DateTime _dateTime;
+
 
         /// <summary>
         /// Gets the year component of the date represented by this instance.
@@ -197,15 +194,6 @@
             get { return _dateTime.Ticks; }
         }
 
-        private bool IsInDaylightSavingTime
-        {
-            get
-            {
-                TimeSpan timeOfYear = TimeOfYear;
-                return timeOfYear > DaylightSavingTimeStart && timeOfYear < DaylightSavingTimeEnd;
-            }
-        }
-
         /// <summary>
         /// Gets the time of day for this instance.
         /// </summary>
@@ -217,10 +205,10 @@
         /// <summary>
         /// Gets the time of year for this instance.
         /// </summary>
-        public TimeSpan TimeOfYear
-        {
-            get { return this - FirstDayOfYear; }
-        }
+        // public TimeSpan TimeOfYear
+        // {
+        //     get { return this - FirstDayOfYear; }
+        // }
 
 
 
@@ -228,10 +216,8 @@
         /// Initializes a new instance of the PersianDateTime class to a specified dateTime.
         /// </summary>
         /// <param name="dateTime">A date and time in the Gregorian calendar.</param>
-        public PersianDateTime(Calendar persianCalendar, TimeZoneInfo persianTimeZone, DateTime dateTime)
+        public PersianDateTime(DateTime dateTime)
         {
-            _persianCalendar = persianCalendar;
-            PersianTimeZoneInfo = persianTimeZone;
             _dateTime = dateTime;
         }
 
@@ -242,10 +228,8 @@
         /// </summary>
         /// <param name="persianDate">The persian date.</param>
         /// <param name="time">The time.</param>
-        public PersianDateTime(Calendar persianCalendar, TimeZoneInfo persianTimeZone, int persianDate, int time)
+        public PersianDateTime( int persianDate, int time)
         {
-            _persianCalendar = persianCalendar;
-            PersianTimeZoneInfo = persianTimeZone;
             int year = persianDate / 10000;
             int month = (persianDate / 100) % 100;
             int day = persianDate % 100;
@@ -263,8 +247,8 @@
         /// <param name="year">The year (1 through 9999).</param>
         /// <param name="month">The month (1 through 12).</param>
         /// <param name="day">The day (1 through the number of days in month).</param>
-        public PersianDateTime(Calendar persianCalendar, TimeZoneInfo persianTimeZone, int year, int month, int day)
-            : this(persianCalendar, persianTimeZone, year, month, day, 0, 0, 0)
+        public PersianDateTime( int year, int month, int day)
+            : this( year, month, day, 0, 0, 0)
         {
         }
 
@@ -283,7 +267,7 @@
         /// <param name="hour">The hours (0 through 23).</param>
         /// <param name="minute">The minutes (0 through 59).</param>
         /// <param name="second">The seconds (0 through 59).</param>
-        public PersianDateTime(Calendar persianCalendar, TimeZoneInfo persianTimeZone, int year, int month, int day, int hour, int minute, int second)
+        public PersianDateTime( int year, int month, int day, int hour, int minute, int second)
         {
             _dateTime = _persianCalendar.ToDateTime(year, month, day, hour, minute, second, 0);
         }
@@ -327,15 +311,15 @@
         /// <summary>
         /// Gets the date component of this instance.
         /// </summary>
-        public PersianDateTime Date
+        public IPersianDateTime Date
         {
-            get { return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, _dateTime.Date); }
+            get { return new PersianDateTime(_dateTime.Date); }
         }
 
         /// <summary>
         /// Gets the first day of the year represented by this instance.
         /// </summary>
-        public PersianDateTime FirstDayOfYear
+        public IPersianDateTime FirstDayOfYear
         {
             get { return AddDays(-DayOfYear + 1).Date; }
         }
@@ -345,7 +329,7 @@
         /// <summary>
         /// Gets the first day of the month represented by this instance.
         /// </summary>
-        public PersianDateTime FirstDayOfMonth
+        public IPersianDateTime FirstDayOfMonth
         {
             get { return AddDays(-Day + 1).Date; }
         }
@@ -355,7 +339,7 @@
         /// <summary>
         /// Gets the first day of the week represented by this instance.
         /// </summary>
-        public PersianDateTime FirstDayOfWeek
+        public IPersianDateTime FirstDayOfWeek
         {
             get { return AddDays(-DayOfWeek).Date; }
         }
@@ -366,9 +350,9 @@
         /// </summary>
         /// <param name="value">A number of whole and fractional days. The value parameter can be negative or positive.</param>
         /// <returns>An object whose value is the sum of the date and time represented by this instance and the number of days represented by value.</returns>
-        public PersianDateTime AddDays(double value)
+        public IPersianDateTime AddDays(double value)
         {
-            return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, _dateTime.AddDays(value));
+            return new PersianDateTime(_dateTime.AddDays(value));
         }
 
         /// <summary>
@@ -376,9 +360,9 @@
         /// </summary>
         /// <param name="value">A positive or negative time interval.</param>
         /// <returns>An object whose value is the sum of the date and time represented by this instance and the time interval represented by value.</returns>
-        public PersianDateTime Add(TimeSpan value)
+        public IPersianDateTime Add(TimeSpan value)
         {
-            return new PersianDateTime(_persianCalendar, PersianTimeZoneInfo, _dateTime.Add(value));
+            return new PersianDateTime(_dateTime.Add(value));
         }
 
         /// <summary>
@@ -499,13 +483,7 @@
             return _dateTime.GetHashCode();
         }
 
-
-        /// <summary>
-        /// Returns a value indicating whether this instance is equal to the specified PersianDateTime instance.
-        /// </summary>
-        /// <param name="value">A PersianDateTime instance to compare to this instance.</param>
-        /// <returns>true if the value parameter equals the value of this instance; otherwise, false.</returns>
-        public bool Equals(PersianDateTime value)
+        public bool Equals(IPersianDateTime value)
         {
             if (object.ReferenceEquals(value, null))
             {
@@ -566,8 +544,18 @@
             int years = Convert.ToInt32(Math.Floor((double)ts.Days / 365));
             return years <= 1 ? "یک سال قبل" : years + " سال قبل";
         }
+        private DateTime _privateDateTime;
 
-
-      
+        public DateTime _dateTime
+        {
+            get
+            {
+                return _privateDateTime;
+            }
+            set
+            {
+                _privateDateTime = value;
+            }
+        }
     }
 }

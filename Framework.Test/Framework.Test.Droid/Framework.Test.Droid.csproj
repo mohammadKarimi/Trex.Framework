@@ -108,6 +108,14 @@
       <Project>{42076c76-8e1c-460e-9d72-898ed5fb33cb}</Project>
       <Name>Trex.Framework.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Trex.Framework.Service\Trex.Framework.Service.Droid\Trex.Framework.Service.Droid.csproj">
+      <Project>{ba8522fb-1fd6-4f26-843a-e8ebacddcb53}</Project>
+      <Name>Trex.Framework.Service.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Trex.Framework.Service\Trex.Framework.Service\Trex.Framework.Service.csproj">
+      <Project>{97b25487-3728-46f7-b3fa-7d1530284c05}</Project>
+      <Name>Trex.Framework.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Framework.Test\Framework.Test.csproj">
       <Project>{31d94055-da1e-43d0-ad3e-81115aa86dbc}</Project>
       <Name>Framework.Test</Name>

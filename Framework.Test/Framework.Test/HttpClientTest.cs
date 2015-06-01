@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Trex.Framework.Controls;
 using Trex.Framework.Core;
+using Trex.Framework.Core.DateTime;
 using Trex.Framework.Core.Serializer;
 using Trex.Framework.Core.Web;
 using Xamarin.Forms;
@@ -25,6 +26,8 @@ namespace Framework.Test
                 Indeterminate = true
             };
 
+            
+            
             var DaysOfSyncDataValueSlider = new TxLabel()
             {
                 FontFamily = "Byekan",
