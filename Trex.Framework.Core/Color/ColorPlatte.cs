@@ -72,6 +72,47 @@
                 public static string Accent3 = "00e676";
                 public static string Accent4 = "00c853";
             }
+
+            public static class Pink
+            {
+                public static string Lighten5 = "fce4ec";
+                public static string Lighten4 = "f8bbd0";
+                public static string Lighten3 = "f48fb1";
+                public static string Lighten2 = "f06292";
+                public static string Lighten1 = "ec407a";
+                public static string PinkPlatte = "e91e63";
+                public static string Darken1 = "d81b60";
+                public static string Darken2 = "c2185b";
+                public static string Darken3 = "ad1457";
+                public static string Darken4 = "880e4f";
+            }
+
+            public static class Purple
+            {
+                public static string Lighten5 = "f3e5f5";
+                public static string Lighten4 = "e1bee7";
+                public static string Lighten3 = "ce93d8";
+                public static string Lighten2 = "ba68c8";
+                public static string Lighten1 = "ab47bc";
+                public static string PurplePlatte = "9c27b0";
+                public static string Darken1 = "8e24aa";
+                public static string Darken2 = "7b1fa2";
+                public static string Darken3 = "6a1b9a";
+                public static string Darken4 = "4a148c";
+            }
+            public static class Yellow
+            {
+                public static string Lighten5 = "fffde7";
+                public static string Lighten4 = "fff9c4";
+                public static string Lighten3 = "fff59d";
+                public static string Lighten2 = "fff176";
+                public static string Lighten1 = "ffee58";
+                public static string YellowPlatte = "ffeb3b";
+                public static string Darken1 = "fdd835";
+                public static string Darken2 = "fbc02d";
+                public static string Darken3 = "f9a825";
+                public static string Darken4 = "f57f17";
+            }
         }
     }
 }

@@ -2,26 +2,25 @@
 {
     using System;
     using System.Globalization;
-    public class PersianDateTime
+    public class PersianDateTime : Trex.Framework.Service.Droid.DateTime.IPersianDateTime  
     {
         /// <summary>
         /// System.TimeZoneInfo دریافت تایم زون ایران و قرار دادن آن در آبجکت
         /// </summary>
-        private TimeZoneInfo PersianTimeZoneInfo;// = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
-        private Calendar _persianCalendar;
-
-
-        private readonly string[] _dayNames = new string[] { "شنبه", "یکشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنج شنبه", "جمعه" };
-        private readonly string[] _monthNames = new string[] { "فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند" };
-
-        private string AM = "ق.ظ";
-        private string PM = "ب.ظ";
-
-        private PersianDateTimeMode Mode = PersianDateTimeMode.UtcOffset;
-        private TimeSpan DaylightSavingTimeStart = TimeSpan.FromDays(1);
-        private TimeSpan DaylightSavingTimeEnd = TimeSpan.FromDays(185);
-        private TimeSpan DaylightSavingTime = TimeSpan.FromHours(1);
-        private TimeSpan OffsetFromUtc = new TimeSpan(3, 30, 0);
+        public TimeZoneInfo PersianTimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
+        public Calendar _persianCalendar = new PersianCalendar();
+       
+        public readonly string[] _dayNames = new string[] { "شنبه", "یکشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنج شنبه", "جمعه" };
+        public readonly string[] _monthNames = new string[] { "فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند" };
+        
+        public string AM = "ق.ظ";
+        public string PM = "ب.ظ";
+    
+        public PersianDateTimeMode Mode = PersianDateTimeMode.UtcOffset;
+        public TimeSpan DaylightSavingTimeStart = TimeSpan.FromDays(1);
+        public TimeSpan DaylightSavingTimeEnd = TimeSpan.FromDays(185);
+        public TimeSpan DaylightSavingTime = TimeSpan.FromHours(1);
+        public TimeSpan OffsetFromUtc = new TimeSpan(3, 30, 0);
 
 
         /// <summary>
@@ -567,45 +566,8 @@
             int years = Convert.ToInt32(Math.Floor((double)ts.Days / 365));
             return years <= 1 ? "یک سال قبل" : years + " سال قبل";
         }
+
+
+      
     }
-
-    #region Enums
-
-    /// <summary>
-    /// فرمت نمایش ویژه برای تاریخ شمسی
-    /// </summary>
-    public enum PersianDateTimeFormat
-    {
-        Date = 0,
-        DateTime = 1,
-        LongDate = 2,
-        LongDateLongTime = 3,
-        FullDate = 4,
-        FullDateLongTime = 5,
-        FullDateFullTime = 6,
-        DateShortTime = 7,
-        ShortDateShortTime = 8,
-        LongDateFullTime = 9
-    }
-
-    /// <summary>
-    ///PersianDateTime.Now. انواع مد نمایش تاریخ شمسی در  
-    /// </summary>
-    public enum PersianDateTimeMode
-    {
-        /// <summary>
-        /// استفاده از تایم زون جاری
-        /// </summary>
-        System,
-        /// <summary>
-        /// استفاده از تایم زون شمسی
-        /// </summary>
-        PersianTimeZoneInfo,
-        /// <summary>
-        ///استفاده از Utc
-        /// </summary>
-        UtcOffset
-    }
-
-    #endregion
 }

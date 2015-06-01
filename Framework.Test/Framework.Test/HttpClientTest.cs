@@ -28,7 +28,7 @@ namespace Framework.Test
             var DaysOfSyncDataValueSlider = new TxLabel()
             {
                 FontFamily = "Byekan",
-                HorizontalOptions = LayoutOptionsExtensions.End,
+                HorizontalOptions = HorizontalOptionsExtensions.End,
             };
 
             var mat = new TxIconLabel("\uf1db", TxFontIcons.MaterialDesign)

@@ -42,10 +42,10 @@
   <ItemGroup>
     <Compile Include="AsyncLock.cs" />
     <Compile Include="Color\ColorPlatte.cs" />
-    <Compile Include="DateTime\PersianDateTime.cs" />
     <Compile Include="DateTime\TimeSpanExtension.cs" />
     <Compile Include="Extensions\EventExtensions.cs" />
     <Compile Include="Helper\EventArgs{T}.cs" />
+    <Compile Include="DateTime\IPersianDateTimen.cs" />
     <Compile Include="Serializer\ISerializer.cs" />
     <Compile Include="Serializer\IStreamSerializer.cs" />
     <Compile Include="Serializer\IJsonSerializer.cs" />
