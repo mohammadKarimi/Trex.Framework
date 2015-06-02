@@ -1,4 +1,4 @@
-﻿namespace Trex.Framework.Core.Services
+﻿namespace Trex.Framework.Service
 {
     using System;
     public interface IApplicationContext

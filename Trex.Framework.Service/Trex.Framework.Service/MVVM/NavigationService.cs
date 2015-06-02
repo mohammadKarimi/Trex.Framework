@@ -5,7 +5,6 @@
     using System.Collections.Generic;
     public class NavigationService : INavigationService
     {
-
         public INavigation Navigation { get; set; }
         public Page Page { get; set; }
         public Task<string> DisplayActionSheet(string title, string cancel, string destruction, params string[] buttons)

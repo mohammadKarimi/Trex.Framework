@@ -1,4 +1,4 @@
-﻿namespace Trex.Framework.Core.Services
+﻿namespace Trex.Framework.Service
 {
     public enum NetworkStatus
     {
