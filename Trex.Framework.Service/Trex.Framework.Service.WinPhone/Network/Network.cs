@@ -2,7 +2,7 @@
 {
     using Microsoft.Phone.Net.NetworkInformation;
     using System;
-    using Trex.Framework.Core.Services;
+    using Trex.Framework.Service;
     public class Network : INetwork
     {
         private readonly NetworkStatus _networkStatus;
