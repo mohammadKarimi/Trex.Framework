@@ -5,7 +5,7 @@ namespace Trex.Framework.Service.iOS.Network
 
     using CoreFoundation;
     using SystemConfiguration;
-    using Trex.Framework.Core.Services;
+    using Trex.Framework.Service;
 
     public static class Reachability
     {
