@@ -1,7 +1,7 @@
 namespace Trex.Framework.Service.Droid.Application
 {
     using System;
-    using Trex.Framework.Core.Services;
+    using Trex.Framework.Service;
     public class ApplicationContext : IApplicationContext
     {
         public void CloseApp()

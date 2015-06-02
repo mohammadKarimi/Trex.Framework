@@ -4,7 +4,7 @@ namespace Trex.Framework.Service.Droid.Network
     using Android.Content;
     using Android.Net;
     using System;
-    using Trex.Framework.Core.Services;
+    using Trex.Framework.Service;
     public class Network : BroadcastMonitor, INetwork
     {
         private Action<NetworkStatus> networkStatusChanged;
