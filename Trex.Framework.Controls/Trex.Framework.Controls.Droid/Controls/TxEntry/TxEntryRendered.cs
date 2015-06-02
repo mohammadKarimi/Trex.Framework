@@ -55,10 +55,10 @@ namespace Trex.Framework.Controls.Droid
                     Control.Gravity = GravityFlags.CenterHorizontal;
                     break;
                 case Xamarin.Forms.TextAlignment.End:
-                    Control.Gravity = GravityFlags.End;
+                    Control.Gravity = GravityFlags.Left;
                     break;
                 case Xamarin.Forms.TextAlignment.Start:
-                    Control.Gravity = GravityFlags.Start;
+                    Control.Gravity = GravityFlags.Right;
                     break;
             }
         }

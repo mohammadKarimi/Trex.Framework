@@ -1,4 +1,4 @@
-﻿namespace Trex.Framework.Controls.Extensions
+﻿namespace Trex.Framework.Controls
 {
     using Xamarin.Forms;
     public static class VerticalOptionsExtensions
