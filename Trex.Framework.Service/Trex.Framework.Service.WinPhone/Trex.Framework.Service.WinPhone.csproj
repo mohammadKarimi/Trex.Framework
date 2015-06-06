@@ -136,10 +136,6 @@
     <Content Include="Assets\Tiles\FlipCycleTileSmall.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core1.csproj">
-      <Project>{42076c76-8e1c-460e-9d72-898ed5fb33cb}</Project>
-      <Name>Trex.Framework.Core1</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Trex.Framework.Service\Trex.Framework.Service.csproj">
       <Project>{97b25487-3728-46f7-b3fa-7d1530284c05}</Project>
       <Name>Trex.Framework.Service</Name>
