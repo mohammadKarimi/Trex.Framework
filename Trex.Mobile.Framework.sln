@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trex.Framework.Core", "Trex.Framework.Core\Trex.Framework.Core.csproj", "{42076C76-8E1C-460E-9D72-898ED5FB33CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trex.Framework.Core1", "Trex.Framework.Core\Trex.Framework.Core1.csproj", "{42076C76-8E1C-460E-9D72-898ED5FB33CB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Forms.Controls", ".Forms.Controls", "{6B8CD9FB-0EA7-4889-B5BA-1C1E8D717457}"
 EndProject

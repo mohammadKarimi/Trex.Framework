@@ -1,4 +1,4 @@
-﻿namespace Trex.Framework.Service.MVVM
+﻿namespace Trex.Framework.Service
 {
     using Xamarin.Forms;
     using System.Threading.Tasks;

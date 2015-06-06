@@ -25,7 +25,7 @@
     <ValidateXaml>true</ValidateXaml>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
-    <NuGetPackageImportStamp>db0c515d</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>8eff879c</NuGetPackageImportStamp>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -94,6 +94,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Application\ApplicationContext.cs" />
+    <Compile Include="FileAccess\FileAccess.cs" />
     <Compile Include="Network\Network.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -112,17 +113,20 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Core, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Xamarin.Forms.1.3.1.6296\lib\WP80\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Platform.WP8, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Xamarin.Forms.1.3.1.6296\lib\WP80\Xamarin.Forms.Platform.WP8.dll</HintPath>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Platform.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Forms.Xaml, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Xamarin.Forms.Platform.WP8, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Xamarin.Forms.1.3.1.6296\lib\WP80\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Platform.WP8.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Xamarin.Forms.1.4.2.6359\lib\WP80\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -132,9 +136,9 @@
     <Content Include="Assets\Tiles\FlipCycleTileSmall.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core.csproj">
+    <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core1.csproj">
       <Project>{42076c76-8e1c-460e-9d72-898ed5fb33cb}</Project>
-      <Name>Trex.Framework.Core</Name>
+      <Name>Trex.Framework.Core1</Name>
     </ProjectReference>
     <ProjectReference Include="..\Trex.Framework.Service\Trex.Framework.Service.csproj">
       <Project>{97b25487-3728-46f7-b3fa-7d1530284c05}</Project>
@@ -157,8 +161,8 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.3.1.6296\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.3.1.6296\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
   </Target>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <Import Project="..\..\packages\Xamarin.Forms.1.3.1.6296\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.3.1.6296\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
 </Project>

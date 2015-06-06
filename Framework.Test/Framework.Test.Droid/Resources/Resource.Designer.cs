@@ -26,6 +26,8 @@ namespace Framework.Test.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::Framework.Test.Droid.Resource.String.ApplicationName;
+			global::Xamarin.Forms.Platform.Resource.String.Hello = global::Framework.Test.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
