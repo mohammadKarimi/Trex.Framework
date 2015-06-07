@@ -71,6 +71,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\TabbedPage\TxTabbedPageRenderer.cs" />
     <Compile Include="Controls\TxSeparator\TxSeparatorDroidView.cs" />
     <Compile Include="Controls\TxSeparator\TxSeparatorRenderer.cs" />
     <Compile Include="Controls\TxButton\TxButtonRenderer.cs" />
