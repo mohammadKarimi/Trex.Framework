@@ -3,10 +3,10 @@
     using System;
     using System.IO;
     using System.IO.IsolatedStorage;
-    
-    public class FileAccess : IFileAccess
+
+    public class FileAccess : Trex.Framework.Service.IFileAccess
     {
-        public static string GetLocalFilePath(string fileName)
+        public string GetLocalFilePath(string fileName)
         {
             string path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
             string dbPath = Path.Combine(path, fileName);
@@ -35,5 +35,7 @@
                 }
             }
         }
+
+
     }
 }

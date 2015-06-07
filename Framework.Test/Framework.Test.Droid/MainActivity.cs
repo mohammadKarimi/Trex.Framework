@@ -6,7 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Trex.Framework.Service.Droid.DateTime;
+
 
 namespace Framework.Test.Droid
 {
@@ -19,7 +19,7 @@ namespace Framework.Test.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new Framework.Test.App());
-            PersianDateTime a = new PersianDateTime(DateTime.Now);
+            
         }
     }
 }

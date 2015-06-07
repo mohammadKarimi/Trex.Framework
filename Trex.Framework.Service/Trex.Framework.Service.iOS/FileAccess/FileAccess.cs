@@ -4,10 +4,9 @@ namespace Trex.Framework.Service.iOS.FileAccess
     using Foundation;
     using System;
     using System.IO;
-    using Trex.Framework.Service.FileAccess;
-    public class FileAccess : IFileAccess
+        public class FileAccess : IFileAccess
     {
-        public static string GetLocalFilePath(string fileName)
+        public   string GetLocalFilePath(string fileName)
         {
             string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");

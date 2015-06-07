@@ -7,12 +7,12 @@ using Xamarin.Forms;
 
 namespace Framework.Test
 {
-    public class App : Application
+    public class PolicyContent : ContentPage
     {
-        public App()
+        public PolicyContent()
         {
-            MainPage = new policyTabbedPage();
+            this.Title = "محمد";
+            this.Content = new Label() { Text = "محمد" };
         }
-
     }
 }

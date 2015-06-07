@@ -3,10 +3,10 @@ namespace Trex.Framework.Service.Droid.FileAccess
 {
     using System;
     using System.IO;
-    using Trex.Framework.Service.FileAccess;
-    public interface FileAccess : IFileAccess
+    using Trex.Framework.Service;
+    public class FileAccess : IFileAccess
     {
-        public static string GetLocalFilePath(string fileName)
+        public string GetLocalFilePath(string fileName)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             string dbPath = Path.Combine(path, fileName);

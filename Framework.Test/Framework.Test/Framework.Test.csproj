@@ -39,6 +39,9 @@
     <Compile Include="Accounts.cs" />
     <Compile Include="app.cs" />
     <Compile Include="HttpClientTest.cs" />
+    <Compile Include="LossCrousel.cs" />
+    <Compile Include="PolicyContent.cs" />
+    <Compile Include="policyTabbedPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\signInViewModel.cs" />
   </ItemGroup>
