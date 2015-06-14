@@ -44,8 +44,6 @@
             return Navigation.PushModalAsync(page);
         }
 
-
-
         public void InsertPageBefore(Page page, Page before)
         {
             Navigation.InsertPageBefore(page, before);

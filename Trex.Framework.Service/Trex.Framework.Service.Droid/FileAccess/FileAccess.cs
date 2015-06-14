@@ -1,5 +1,4 @@
-﻿
-namespace Trex.Framework.Service.Droid.FileAccess
+﻿namespace Trex.Framework.Service.Droid.FileAccess
 {
     using System;
     using System.IO;
