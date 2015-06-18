@@ -7,7 +7,7 @@
     using System.Text;
     using System.Threading.Tasks;
     using Trex.Framework.Core.Serializer;
-   
+
     public class HttpRestClient : IRestClient
     {
         protected readonly ISerializer Serializer;
@@ -21,6 +21,7 @@
             this.StringContentType = contentType;
             this.Serializer = serializer;
             this.Client = client ?? new HttpClient();
+            this.Timeout = TimeSpan.FromSeconds(30);
         }
         public TimeSpan Timeout
         {
