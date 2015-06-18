@@ -44,7 +44,6 @@
     <Compile Include="Color\ColorPlatte.cs" />
     <Compile Include="DateTime\IPersianDateTime.cs" />
     <Compile Include="DateTime\TimeSpanExtension.cs" />
-    <Compile Include="Encryption\Crypto.cs" />
     <Compile Include="Extensions\EventExtensions.cs" />
     <Compile Include="Helper\EventArgs{T}.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
