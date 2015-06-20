@@ -39,6 +39,9 @@
     <Compile Include="Application\IApplicationContext.cs" />
     <Compile Include="Device\IDevice.cs" />
     <Compile Include="FileAccess\IFileAccess.cs" />
+    <Compile Include="Geolocation\IGeolocator.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Navigation\INavigationService.cs" />
     <Compile Include="Navigation\NavigationService.cs" />
     <Compile Include="Network\INetwork.cs" />
@@ -49,7 +52,10 @@
     <Compile Include="ToastNotification\ToastNotificationModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Geolocation\" />
+    <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core.csproj">
+      <Project>{c3c6aa8c-0edb-4840-807c-03fb3ccfc170}</Project>
+      <Name>Trex.Framework.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
