@@ -46,12 +46,14 @@
         }
         public async Task<T> PostAsync<T>(string url, object dto)
         {
-            var content = this.Serializer.Serialize(dto);
-
+            string content = string.Empty;
+            string contenterror = string.Empty;
+                content = this.Serializer.Serialize(dto);
             var response = await this.Client.PostAsync(
                 url,
                 new StringContent(content, Encoding.UTF8, this.StringContentType));
             return await GetResponse<T>(response, this.Serializer);
+
         }
         public async Task PostAsync(string url, object dto)
         {
