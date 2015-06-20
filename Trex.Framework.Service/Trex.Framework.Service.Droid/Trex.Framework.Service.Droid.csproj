@@ -73,6 +73,9 @@
   <ItemGroup>
     <Compile Include="Application\ApplicationContext.cs" />
     <Compile Include="FileAccess\FileAccess.cs" />
+    <Compile Include="Geolocation\GeolocationContinuousListener.cs" />
+    <Compile Include="Geolocation\GeolocationSingleListener.cs" />
+    <Compile Include="Geolocation\Geolocator.cs" />
     <Compile Include="Network\BroadcastMonitor.cs" />
     <Compile Include="Network\BroadcastRecieverExtensions.cs" />
     <Compile Include="Network\Network.cs" />
@@ -80,6 +83,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core.csproj">
+      <Project>{c3c6aa8c-0edb-4840-807c-03fb3ccfc170}</Project>
+      <Name>Trex.Framework.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Trex.Framework.Service\Trex.Framework.Service.csproj">
       <Project>{97b25487-3728-46f7-b3fa-7d1530284c05}</Project>
       <Name>Trex.Framework.Service</Name>
