@@ -11,8 +11,7 @@ namespace Framework.Test
     {
         public App()
         {
-            MainPage = new policyTabbedPage();
+            MainPage = new HttpClientTest();
         }
-
     }
 }

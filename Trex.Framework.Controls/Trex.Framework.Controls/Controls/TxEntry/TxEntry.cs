@@ -33,7 +33,6 @@
             get { return (Color)GetValue(PlaceholderTextColorProperty); }
             set { SetValue(PlaceholderTextColorProperty, value); }
         }
-
         #region __iOS__
         public EventHandler LeftSwipe;
         public EventHandler RightSwipe;

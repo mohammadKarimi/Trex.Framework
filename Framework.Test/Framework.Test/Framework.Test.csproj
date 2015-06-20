@@ -39,9 +39,6 @@
     <Compile Include="Accounts.cs" />
     <Compile Include="app.cs" />
     <Compile Include="HttpClientTest.cs" />
-    <Compile Include="LossCrousel.cs" />
-    <Compile Include="PolicyContent.cs" />
-    <Compile Include="policyTabbedPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\signInViewModel.cs" />
   </ItemGroup>
@@ -49,6 +46,14 @@
     <ProjectReference Include="..\..\Trex.Framework.Controls\Trex.Framework.Controls\Trex.Framework.Controls.csproj">
       <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
       <Name>Trex.Framework.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Trex.Framework.Core\Trex.Framework.Core.csproj">
+      <Project>{c3c6aa8c-0edb-4840-807c-03fb3ccfc170}</Project>
+      <Name>Trex.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Trex.Framework.Service\Trex.Framework.Service\Trex.Framework.Service.csproj">
+      <Project>{97b25487-3728-46f7-b3fa-7d1530284c05}</Project>
+      <Name>Trex.Framework.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
