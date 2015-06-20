@@ -45,6 +45,21 @@
     <Compile Include="DateTime\IPersianDateTime.cs" />
     <Compile Include="DateTime\TimeSpanExtension.cs" />
     <Compile Include="Extensions\EventExtensions.cs" />
+    <Compile Include="Geolocation\GeolocationException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geolocation\Position.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geolocation\PositionCalculator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geolocation\PositionErrorEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geolocation\PositionEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Helper\EventArgs{T}.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serializer\IJsonSerializer.cs" />
