@@ -1,4 +1,7 @@
-﻿namespace Trex.Framework.Service.Droid.Geolocation
+﻿using Xamarin.Forms;
+using Trex.Framework.Service.Droid.Geolocation;
+[assembly: Dependency(typeof(Geolocator))]
+namespace Trex.Framework.Service.Droid.Geolocation
 {
     using System;
     using System.Linq;
@@ -235,7 +238,7 @@
                 _manager.RequestLocationUpdates(_providers[i], minTime, (float)minDistance, _listener, looper);
             }
         }
-     
+
         private void OnListenerPositionChanged(object sender, PositionEventArgs e)
         {
             if (!IsListening) // ignore anything that might come in afterwards

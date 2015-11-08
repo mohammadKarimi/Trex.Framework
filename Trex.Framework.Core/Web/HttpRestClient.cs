@@ -29,7 +29,6 @@
             {
                 return this.Client.Timeout;
             }
-
             set
             {
                 this.Client.Timeout = value;

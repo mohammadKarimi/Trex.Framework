@@ -11,18 +11,18 @@ namespace Trex.Framework.Controls.WinPhone
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
         {
             base.OnElementChanged(e);
-            this.SetFont((TxLabel)Element);
+            this.SetFont((TxIconLabel)Element);
         }
         protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
-            var view = (TxLabel)Element;
-            if (e.PropertyName == TxLabel.FontProperty.PropertyName)
+            var view = (TxIconLabel)Element;
+            if (e.PropertyName == TxIconLabel.FontProperty.PropertyName)
                 this.SetFont(view);
         }
-        private void SetFont(TxLabel view)
+        private void SetFont(TxIconLabel view)
         {
-            view.FontFamily = string.Format(@"\Assets\Fonts\{0}.ttf#{1}", view.FontFamily, view.FontFamily);
+            view.FontFamily = @"\Assets\Fonts\" + view.FontFamily + ".ttf#" + view.FontFamily;
         }
     }
 }

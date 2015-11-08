@@ -4,7 +4,7 @@
     using Xamarin.Forms;
     public class TxIconLabel : Label
     {
-        public TxIconLabel(string text, TxFontIcons font = TxFontIcons.MaterialDesign)
+        public TxIconLabel(string text, TxFontIcons font = TxFontIcons.MaterialDesignIcons)
         {
             this.Text = text;
             this.FontFamily = font.ToString();
@@ -13,6 +13,6 @@
     public enum TxFontIcons
     {
         FontAwesome,
-        MaterialDesign
+        MaterialDesignIcons
     }
 }

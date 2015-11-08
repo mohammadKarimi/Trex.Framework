@@ -30,5 +30,7 @@
         public double? AltitudeAccuracy { get; set; }
         public double? Heading { get; set; }
         public double? Speed { get; set; }
+       
+
     }
 }

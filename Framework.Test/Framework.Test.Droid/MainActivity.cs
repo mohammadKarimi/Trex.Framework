@@ -6,7 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-
+using Xamarin.Forms.Platform.Android;
+using Xamarin.Forms;
+using Xamarin;
 
 namespace Framework.Test.Droid
 {
@@ -18,8 +20,11 @@ namespace Framework.Test.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new Framework.Test.App());
             
+            LoadApplication(new Framework.Test.App());
+
+
+
         }
     }
 }

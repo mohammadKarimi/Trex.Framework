@@ -48,7 +48,5 @@ namespace Framework.Test.ViewModel
                 OnPropertyChanged();
             }
         }
-
-
     }
 }

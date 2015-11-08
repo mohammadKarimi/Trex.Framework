@@ -22,7 +22,7 @@ namespace Trex.Framework.Controls.WinPhone
         }
         private void SetFont(TxLabel view)
         {
-            view.FontFamily = string.Format(@"\Assets\Fonts\{0}.ttf#{1}", view.FontFamily, view.FontFamily);
+            view.FontFamily = @"\Assets\Fonts\" + view.FontFamily + ".ttf#" + view.FontFamily;
         }
     }
 }
